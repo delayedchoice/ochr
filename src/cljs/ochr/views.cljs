@@ -21,7 +21,7 @@
    :href "#/about"])
 
 (defn home-panel []
-  (let [result (re-frame/subscribe [::subs/http-result])] 
+  (let [http-result @(re-frame/subscribe [::subs/http-result])] 
     [re-com/v-box
     :gap "1em"
     :children [[home-title]
@@ -31,7 +31,7 @@
                         :on-change #(re-frame/dispatch [::events/upload (-> % .-target .-files (aget 0))])}]
 
                [link-to-about-page]
-               [re-com/label :label result ]]]))
+               [re-com/p (:data http-result) ]]]))
 
 (defn http-result []
   (let [name (re-frame/subscribe [::subs/name])]

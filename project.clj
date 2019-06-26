@@ -18,7 +18,7 @@
                  [day8.re-frame/http-fx "0.1.6"]
                  ]
   :repl-options {:init-ns ochr.core}
-  :ring {:handler langpic.core/handler}
+  ;:ring {:handler ochr.core/handler}
   :plugins [[lein-ring "0.12.2"]
             [lein-cljsbuild "1.1.7"]
             [lein-garden "0.2.8"]]

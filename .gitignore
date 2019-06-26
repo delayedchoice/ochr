@@ -12,4 +12,6 @@ pom.xml.asc
 .hgignore
 .hg/
 .python-version
-
+/resources/public/js
+.DS_Store
+.rebel_readline_history

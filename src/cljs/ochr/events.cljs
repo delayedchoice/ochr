@@ -25,8 +25,8 @@
                       (.append "file" file "filename.txt"))]
       {:db   (assoc db :show-twirly true)   ;; causes the twirly-waiting-dialog to show??
       :http-xhrio {:method          :post
-                   :uri             "http://locaolhost:3449/ochr"
-                   :timeout         8000                                           ;; optional see API docs
+                   :uri             "http://localhost:3449/ochr"
+                   :timeout         80000                                           ;; optional see API docs
                    :body            form-data
                    :response-format (ajax/json-response-format {:keywords? true})  ;; IMPORTANT!: You must provide this.
                    :on-success      [::good-upload]
